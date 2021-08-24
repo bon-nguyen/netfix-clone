@@ -4,7 +4,7 @@ import './index.css';
 import App from './App';
 import reportWebVitals from './reportWebVitals';
 import {GlobalStyles} from './global-styles';
-import 'normalize.css';
+import 'normalize.css'; // Note this
 render(
   <React.StrictMode>
     <GlobalStyles/>
