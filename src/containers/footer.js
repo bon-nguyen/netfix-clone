@@ -37,7 +37,14 @@ export function FooterContainer(){
                 </Footer.Column>
             </Footer.Row>
             <Footer.Break/>
-            <Footer.Text>Netflix United Kingdom</Footer.Text>
+                <Footer.Wrapper>
+                    <Footer.Select>
+                        <Footer.Option>English</Footer.Option>
+                        <Footer.Option>Tiếng Việt</Footer.Option>
+                    </Footer.Select>
+                </Footer.Wrapper>
+            <Footer.Break/>
+            <Footer.Text>Netflix Vietnam</Footer.Text>
         </Footer>
     );
 }

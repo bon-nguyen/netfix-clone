@@ -7,10 +7,13 @@ export const Container = styled.div`
 
 export const Inner = styled.div`
     display: flex;
-    max-width: 815px;
     padding: 70px 45px;
     flex-direction: column;
+    max-width: 905px;
     margin: auto;
+    @media (max-width: 600px){
+        padding: 70px 0px;
+    }
 `;
 
 export const Frame = styled.div`
@@ -33,7 +36,6 @@ export const Title = styled.h1`
 export const Item = styled.div`
     color: #fff;
     margin-bottom: 10px;
-    max-width: 728px;
     width: 100%;
 
     &:first-of-type{

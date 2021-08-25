@@ -1,5 +1,5 @@
 import React from 'react';
-import {Container, Row, Break, Title, Link, Text, Column } from './styles/footer';
+import {Container, Row, Break, Title, Link, Text, Column, Select, Option, Wrapper } from './styles/footer';
 
 export default function Footer({children, ...restProps}){
     return <Container {...restProps}>{children}</Container>;
@@ -26,4 +26,15 @@ Footer.Text = function FooterText ({children, ...restProps}){
 
 Footer.Column = function FooterColumn ({children, ...restProps}){
     return <Column { ...restProps}>{children}</Column>
+}
+
+Footer.Select = function FooterSelect ({children, ...restProps}){
+    return <Select {...restProps}>{children}</Select>
+}
+
+Footer.Option = function FooterOption ({children, ...restProps}){
+    return <Option {...restProps}>{children}</Option>
+}
+Footer.Wrapper = function FooterWrapper ({children, ...restProps}){
+    return <Wrapper {...restProps}>{children}</Wrapper>
 }
