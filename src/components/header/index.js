@@ -1,28 +1,49 @@
-import React from 'react';
-import {Link as ReactRouterLink} from 'react-router-dom';
-import ( Container) from './styles/header';
 
-export default function Header({bg = true, children, ...restProps}){
+
+import React from 'react';
+import {Link as LinkR} from 'react-router-dom';
+
+import { Background, Container, Logo, Wrapper, Login, Language, Option, Select  } from './styles/header';
+
+export default function Header({bg = true , children, ...restProps}){
     return bg ? (
         <Background {...restProps}>
             {children}
         </Background>
     ) : (
-        {children}
+        children
     );
 }
 
 Header.Frame = function HeaderFrame({ children, ...restProps }) {
     return <Container {...restProps}>{children}</Container>;
 };
-  
-Header.Group = function HeaderGroup({ children, ...restProps }) {
-    return <Group {...restProps}>{children}</Group>;
+
+Header.Logo = function HeaderLogo({ to, ...restProps }) {
+    return (
+      <LinkR to={to}>
+        <Logo {...restProps} />
+      </LinkR>
+    );
 };
 
-Header.Logo = function HeaderLogo({to, ...restProps}){
-    return <ReactRouterLink to={to}>
-        <Logo {...restProps} />
-    </ReactRouterLink>
+Header.Wrapper = function HeaderWrapper({children, ...restProps}) {
+    return <Wrapper {...restProps}>{children}</Wrapper>;
+}
+
+Header.Login = function HeaderLogin ({children, ...restProps}){
+    return <Login {...restProps}>{children}</Login>;
+}
+
+Header.Language = function HeaderLanguage ({children, ...restProps}){
+    return <Language {...restProps}>{children}</Language>;
+}
+
+Header.Option = function HeaderOption({children, ...restProps}) {
+    return <Option {...restProps}>{children}</Option>
+}
+
+Header.Select = function HeaderSelect({children, ...restProps}){
+    return <Select {...restProps}>{children}</Select>
 }
 
