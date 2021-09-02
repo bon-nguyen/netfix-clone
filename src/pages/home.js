@@ -4,8 +4,10 @@ import { JumbotronContainer } from '../containers/jumbotron';
 import { FaqsContainer } from '../containers/faqs';
 import { FooterContainer } from '../containers/footer';
 import { HeaderContainer } from '../containers/header';
-
+import Firebase from '../lib/firebase.prod';
 export default function Home(){
+    const ref = Firebase.firestore().collection("schools");
+    console.log("ref",ref );
     return (
         <>  
             <HeaderContainer>
