@@ -1,20 +1,20 @@
 import './App.css';
-import { Home } from './pages';
+import { Home, Signin } from './pages';
 import * as ROUTES from './constants/routes';
 import {
-  BrowserRouter as Router, Route,
+  BrowserRouter as Switch, Route,
 
 } from "react-router-dom";
 
 
 function App() {
   return (
-    <Router>
-      <Route path={ROUTES.HOME}>
+    <Switch>
+      <Route path={ROUTES.HOME} exact>
         <Home />
       </Route>
       <Route path={ROUTES.SIGN_IN}>
-        <p>This is Signin</p>
+        <Signin/>
       </Route>
       <Route path={ROUTES.SIGN_UP}>
         <p>This is Signup</p>
@@ -22,7 +22,7 @@ function App() {
       <Route path={ROUTES.BROWSE}>
         <p>This is Browse</p>
       </Route>
-    </Router>
+    </Switch>
   );
 }
 
